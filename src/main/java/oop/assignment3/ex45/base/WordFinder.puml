@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+App <|-- FileFunctions
+App <|-- FindWord
+
+
+class FileFunctions {
++ setOutputFile()
++ readFile()
++ writeFile()
+}
+
+class FindWord{
++ findAndReplace()
+}
+
+@enduml
