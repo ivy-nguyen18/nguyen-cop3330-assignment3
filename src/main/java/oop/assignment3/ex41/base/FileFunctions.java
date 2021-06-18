@@ -3,6 +3,7 @@ package oop.assignment3.ex41.base;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,8 @@ public class FileFunctions {
 
         //create a List for Employee and return list back to main
         try{
-            input = Files.readAllLines(Paths.get("src/main/java/oop/assignment3/ex41/base/exercise41_input.txt"), Charset.defaultCharset());
+            Path file = Paths.get("src/main/java/oop/assignment3/ex41/base/exercise41_input.txt");
+            input = Files.readAllLines(file, Charset.defaultCharset());
         }catch(IOException e){
             e.printStackTrace();
         }
