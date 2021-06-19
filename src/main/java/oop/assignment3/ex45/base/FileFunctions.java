@@ -30,7 +30,8 @@ public class FileFunctions {
         //write to a file
         try{
             //put the file path in the same package for convenience -> otherwise it's in global
-            String newFilePath = String.format("src/main/java/oop/assignment3/ex45/base/%s", outputFile);
+            //String newFilePath = String.format("src/main/java/oop/assignment3/ex45/base/%s", outputFile);
+            String newFilePath = String.format("%s.txt", outputFile);
             BufferedWriter newFile = new BufferedWriter(new FileWriter(newFilePath));
             newFile.write(content);
             newFile.close();

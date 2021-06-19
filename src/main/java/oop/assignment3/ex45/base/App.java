@@ -1,14 +1,6 @@
 package oop.assignment3.ex45.base;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class App {
@@ -25,7 +17,7 @@ public class App {
         content = newContent.findAndReplace(content);
 
         //create output file
-        System.out.print("Enter name of output file <filename>.txt: ");
+        System.out.print("Enter name of output file: ");
         String nameFile = input.nextLine();
         newFile.setOutputFile(nameFile);
 

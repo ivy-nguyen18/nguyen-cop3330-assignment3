@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="All files" pattern="src:oop.assignment3.ex41.base.*||src:oop.assignment3.ex42.base.*||src:oop.assignment3.ex43.base.*||src:oop.assignment3.ex45.base.*||src:oop.assignment3.ex46.base.*" />
+</component>

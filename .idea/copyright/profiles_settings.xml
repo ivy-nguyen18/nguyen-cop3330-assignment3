@@ -1,0 +1,11 @@
+<component name="CopyrightManager">
+  <settings default="COP3330">
+    <module2copyright>
+      <element module="Tests" copyright="COP3330" />
+      <element module="Production" copyright="COP3330" />
+      <element module="Project Files" copyright="COP3330" />
+      <element module="All" copyright="COP3330" />
+      <element module="Open Files" copyright="COP3330" />
+    </module2copyright>
+  </settings>
+</component>
