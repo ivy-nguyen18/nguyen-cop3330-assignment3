@@ -9,8 +9,9 @@ import java.util.*;
 
 public class HashMapFunctions {
     //create hashmap to store frequency counter
-    private static Map<String,Integer> wordFreqMap = new TreeMap<>();
+    private Map<String,Integer> wordFreqMap = new TreeMap<>();
 
+    //getter to return wordFreqMap
     public Map<String,Integer> getWordFreqMap(){
         return wordFreqMap;
     }

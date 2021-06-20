@@ -1,22 +1,23 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-App <|-- FileFunctions
-App <|-- ListFunctions
+ListFunctions o-> FileFunctions
 
 class FileFunctions {
+    - input: List
+    + FileFunctions()
     + readFile()
 }
 
 class ListFunctions {
+    - list: List
+
+    + ListFunctions()
     + sortList()
     + printList()
+    - formatTable()
 }
 
-class App {
-
-
-}
 
 
 @enduml

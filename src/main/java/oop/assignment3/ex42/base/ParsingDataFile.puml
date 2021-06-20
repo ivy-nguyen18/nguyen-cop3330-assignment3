@@ -2,24 +2,27 @@
 'https://plantuml.com/class-diagram
 
 
-App <|-- FileFunctions
-FileFunctions <|-- Employee
-App <|- ListFunctions
+Employee o->ListFunctions
+ListFunctions o-> FileFunctions
 
 class FileFunctions {
-+ readFile()
-- parseEmployeeInfo()
+    + readFile()
+    - parseEmployeeInfo()
 }
 
 class ListFunctions {
-+ printList()
-- createHeaders()
+    + printList()
+    - createHeaders()
 }
 
 class Employee {
-firstName : String
-lastName : String
-salary : int
+    - firstName : String
+    - lastName : String
+    - salary : int
+
+    + getFirstName()
+    + getLastName()
+    + getSalary()
 }
 
 @enduml

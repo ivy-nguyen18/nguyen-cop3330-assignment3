@@ -45,16 +45,16 @@ public class App {
         return "y".equalsIgnoreCase(answer);
     }
 
-    public static void checkJavascript(Boolean wantJavascript, DirectoryFunctions newDir){
-        //wantJavascript = true
+    private static void checkJavascript(Boolean wantJavascript, DirectoryFunctions newDir){
+        //if wantJavascript is y = true
         if(wantJavascript){
             //make javascript folder
             newDir.makeJavascriptFolder();
         }
     }
 
-    public static void checkCSS(Boolean wantCSS, DirectoryFunctions newDir){
-        //wantCSS = true
+    private static void checkCSS(Boolean wantCSS, DirectoryFunctions newDir){
+        //if wantCSS is y = true
         if(wantCSS){
             //make CSS folder
             newDir.makeCSSFolder();

@@ -20,9 +20,9 @@ public class FileFunctions {
     }
 
     public String readFile(){
+        //read file
         String content = "";
         try{
-            //read file
             Path file = Paths.get("src/main/java/oop/assignment3/ex45/base/exercise45_input.txt");
             content = Files.readString(file);
         }catch(IOException e){
@@ -34,8 +34,6 @@ public class FileFunctions {
     public void writeFile(String content){
         //write to a file
         try{
-            //put the file path in the same package for convenience -> otherwise it's in global
-            //String newFilePath = String.format("src/main/java/oop/assignment3/ex45/base/%s", outputFile);
             String newFilePath = String.format("%s.txt", outputFile);
             BufferedWriter newFile = new BufferedWriter(new FileWriter(newFilePath));
             newFile.write(content);

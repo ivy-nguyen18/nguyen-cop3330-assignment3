@@ -1,28 +1,34 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-App <|-- DirectoryFunctions
-App <|-- FileFunctions
+FileFunctions o-> DirectoryFunctions
+DirectoryFunctions o-> App
 
 class DirectoryFunctions {
-+ DirectoryFunctions()
-+ makeDirectory()
-+ makeJavascriptFolder()
-+ makeCSSFolder()
+    - siteName: String
+
+    + DirectoryFunctions()
+    + makeDirectory()
+    + makeJavascriptFolder()
+    + makeCSSFolder()
 }
 
 class FileFunctions{
-+ FileFunctions()
-+ createHTML()
-+ writeToHTML()
-- formatHTML()
+    - html: File
+    - siteName: String
+    - author: String
+
+    + FileFunctions()
+    + createHTML()
+    + writeToHTML()
+    - formatHTML()
 }
 
 class App{
-- takeInput()
-- parseBoolean()
-+ checkJavascript()
-+ checkCSS()
+    - takeInput()
+    - parseBoolean()
+    - checkJavascript()
+    - checkCSS()
 }
 
 @enduml

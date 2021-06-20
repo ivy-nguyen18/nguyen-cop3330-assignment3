@@ -3,18 +3,19 @@
 
 
 
-App <|-- FileFunctions
-App <|-- FindWord
+ FindWord o-> FileFunctions
 
 
 class FileFunctions {
-+ setOutputFile()
-+ readFile()
-+ writeFile()
+    - outputFile: String
+
+    + setOutputFile()
+    + readFile()
+    + writeFile()
 }
 
 class FindWord{
-+ findAndReplace()
+    + findAndReplace()
 }
 
 @enduml
