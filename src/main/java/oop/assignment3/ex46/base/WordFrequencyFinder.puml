@@ -15,17 +15,17 @@ class HashMapFunctions {
 
     + HashMapFunctions()
     + getWordFreqMap()
-    + setKeys()
+    + setKeys(String [])
     + sortMap()
     - isMapSorted()
     - areKeysUnique()
-    - swapMaps()
+    - swapMaps(List<Map.Entry<String,Integer>>)
 }
 
 class Content{
-    + parseContent()
-    + printFrequencyDescending()
-    + createHistogram()
+    + parseContent(String)
+    + printFrequencyDescending(Map<String, Integer>)
+    + createHistogram(int)
 }
 
 

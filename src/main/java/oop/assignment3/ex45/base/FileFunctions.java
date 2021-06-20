@@ -13,11 +13,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FileFunctions {
-    private String outputFile;
-
-    public void setOutputFile(String outputFile){
-        this.outputFile = outputFile;
-    }
 
     public String readFile(){
         //read file
@@ -31,7 +26,7 @@ public class FileFunctions {
         return content;
     }
 
-    public void writeFile(String content){
+    public void writeFile(String content, String outputFile){
         //write to a file
         try{
             String newFilePath = String.format("%s.txt", outputFile);

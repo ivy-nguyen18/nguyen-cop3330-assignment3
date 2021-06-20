@@ -19,14 +19,12 @@ public class App {
 
         //replace the words utilize and utilizes with use and uses
         FindWord newContent = new FindWord();
-        content = newContent.findAndReplace(content);
-
-        //create output file
-        System.out.print("Enter name of output file: ");
-        String nameFile = input.nextLine();
-        newFile.setOutputFile(nameFile);
+        content = newContent.findAndReplace(content, "utilize", "use");
+        content = newContent.findAndReplace(content, "utilizes","uses");
 
         //write to output file
-        newFile.writeFile(content);
+        System.out.print("Enter name of output file: ");
+        String nameFile = input.nextLine();
+        newFile.writeFile(content, nameFile);
     }
 }

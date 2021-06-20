@@ -7,15 +7,12 @@
 
 
 class FileFunctions {
-    - outputFile: String
-
-    + setOutputFile()
     + readFile()
-    + writeFile()
+    + writeFile(String, String)
 }
 
 class FindWord{
-    + findAndReplace()
+    + findAndReplace(String, String, String)
 }
 
 @enduml
