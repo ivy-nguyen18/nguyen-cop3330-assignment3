@@ -7,6 +7,7 @@
 package oop.assignment3.ex46.base;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -17,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class HashMapFunctionsTest {
 
     @DisplayName("Unique Keys")
-    @Test
+    @RepeatedTest(10)
     void setKeys_no_two_keys_are_same1() {
         Map<String, Integer> map = new TreeMap<>();
         HashMapFunctions newMap = new HashMapFunctions(map);
@@ -32,7 +33,7 @@ class HashMapFunctionsTest {
     }
 
     @DisplayName("Unique Keys: Mixed Cap")
-    @Test
+    @RepeatedTest(10)
     void setKeys_no_two_keys_are_same2() {
         Map<String, Integer> map = new TreeMap<>();
         HashMapFunctions newMap = new HashMapFunctions(map);
@@ -47,7 +48,7 @@ class HashMapFunctionsTest {
     }
 
     @DisplayName("Key Iteration 1")
-    @Test
+    @RepeatedTest(10)
     void setKeys_iterate_if_same_key1() {
         Map<String, Integer> map = new TreeMap<>();
         HashMapFunctions newMap = new HashMapFunctions(map);
@@ -68,7 +69,7 @@ class HashMapFunctionsTest {
     }
 
     @DisplayName("Key Iteration 2")
-    @Test
+    @RepeatedTest(10)
     void setKeys_iterate_if_same_key2() {
         Map<String, Integer> map = new TreeMap<>();
         HashMapFunctions newMap = new HashMapFunctions(map);
@@ -89,7 +90,7 @@ class HashMapFunctionsTest {
     }
 
     @DisplayName("Value sorted in Descending Order 1")
-    @Test
+    @RepeatedTest(10)
     void sortMap_sorts_values_in_descending_order1() {
         Map<String, Integer> map = new TreeMap<>();
         HashMapFunctions newMap = new HashMapFunctions(map);
@@ -106,7 +107,7 @@ class HashMapFunctionsTest {
     }
 
     @DisplayName("Value sorted in Descending Order 2")
-    @Test
+    @RepeatedTest(10)
     void sortMap_sorts_values_in_descending_order2() {
         Map<String, Integer> map = new TreeMap<>();
         HashMapFunctions newMap = new HashMapFunctions(map);

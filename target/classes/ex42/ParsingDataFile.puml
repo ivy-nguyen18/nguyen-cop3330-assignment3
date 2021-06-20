@@ -6,12 +6,13 @@ Employee o->ListFunctions
 ListFunctions o-> FileFunctions
 
 class FileFunctions {
-    + readFile()
-    - parseEmployeeInfo()
+    + readFile(List<Employee>)
+    - parseEmployeeInfo(String[])
 }
 
 class ListFunctions {
-    + printList()
+    + printList(List<Employee>)
+    + getList()
     - createHeaders()
 }
 

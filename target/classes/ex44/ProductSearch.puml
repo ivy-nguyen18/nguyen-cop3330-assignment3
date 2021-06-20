@@ -11,8 +11,8 @@ class JsonFunctions{
 }
 
 class Inventory{
-    - productList: List
-    - productMap: HashMap<String, Product>
+    - productList: ArrayList<Product>
+    - inventoryMap: HashMap<String, Product>
 
     + setInventoryMap(HashMap<String, Product>)
     + productPresent(String)

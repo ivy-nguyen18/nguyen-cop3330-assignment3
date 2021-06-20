@@ -16,22 +16,26 @@ public class Inventory {
     @SerializedName("products")
     private final ArrayList<Product> productList;
 
-    private HashMap<String, Product> productMap;
+    private HashMap<String, Product> inventoryMap;
 
     public Inventory(ArrayList<Product> productList) {
+        //instantiate productList
         this.productList = productList;
     }
 
     public void setInventoryMap(HashMap<String, Product> productMap){
-        this.productMap = productMap;
+        //create an Inventory map from Product List
+        this.inventoryMap = productMap;
         for(Product product: productList){
-            this.productMap.put(product.getName(), product);
+            this.inventoryMap.put(product.getName(), product);
         }
     }
 
     public String searchInventory(String query){
+        //Search InventoryMap for query
         String output = "";
-        for(String key: productMap.keySet() ){
+        for(String key: inventoryMap.keySet() ){
+            //when query found, return product information string
             if(findProduct(key, query)){
                 output = formatProductString(key);
             }
@@ -40,17 +44,20 @@ public class Inventory {
     }
 
     private String formatProductString(String key){
-        return (String.format("Name: %s%n", productMap.get(key).getName()) +
-                String.format("Price: %.2f%n", productMap.get(key).getPrice()) +
-                String.format("Quantity: %d", productMap.get(key).getQuantity()));
+        //format product information string
+        return (String.format("Name: %s%n", inventoryMap.get(key).getName()) +
+                String.format("Price: %.2f%n", inventoryMap.get(key).getPrice()) +
+                String.format("Quantity: %d", inventoryMap.get(key).getQuantity()));
     }
 
     public boolean productPresent(String query){
-        return productMap.containsKey(query);
+        //check if the query is in the productMap
+        return inventoryMap.containsKey(query);
     }
 
     private boolean findProduct(String key, String query){
-        return productMap.get(key).getName().equalsIgnoreCase(query);
+        //look in inventoryMap for key
+        return inventoryMap.get(key).getName().equalsIgnoreCase(query);
     }
 
     public ArrayList<Product> getProductList(){

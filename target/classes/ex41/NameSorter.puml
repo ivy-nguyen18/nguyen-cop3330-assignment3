@@ -5,17 +5,20 @@ ListFunctions o-> FileFunctions
 
 class FileFunctions {
     - input: List
-    + FileFunctions()
+
+    + FileFunctions(List<String>)
     + readFile()
+    + writeFile(StringBuilder)
 }
 
 class ListFunctions {
     - list: List
 
-    + ListFunctions()
+    + ListFunctions(List<String>)
     + sortList()
-    + printList()
-    - formatTable()
+    + getList()
+    + printList(StringBuilder)
+    - formatTable(StringBuilder)
 }
 
 

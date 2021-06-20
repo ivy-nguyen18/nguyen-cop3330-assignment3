@@ -6,16 +6,16 @@
 
 package oop.assignment3.ex46.base;
 
-import jdk.jfr.Label;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.RepeatedTest;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ContentTest {
 
     @DisplayName("Removes New Line")
-    @Test
+    @RepeatedTest(10)
     void parseContent_takes_out_all_newLines_and_replaces_with_space_to_split_string_at_space_into_array() {
         Content content = new Content();
         String[] expected = new String [] {"Chubby", "Chipmunks", "Live", "Forever"};
@@ -24,7 +24,7 @@ class ContentTest {
     }
 
     @DisplayName("Removes single spaces")
-    @Test
+    @RepeatedTest(10)
     void parseContent_takes_out_all_white_space_to_convert_to_String_array1() {
         Content content = new Content();
         String[] expected = new String [] {"Chubby", "Chipmunks", "Live", "Forever"};
@@ -33,7 +33,7 @@ class ContentTest {
     }
 
     @DisplayName("Removes multiple spaces")
-    @Test
+    @RepeatedTest(10)
     void parseContent_takes_out_all_white_space_to_convert_to_String_array2() {
         Content content = new Content();
         String[] expected = new String [] {"Chubby", "Chipmunks", "Live", "Forever"};
@@ -42,7 +42,7 @@ class ContentTest {
     }
 
     @DisplayName("Removes multiple spaces and newlines")
-    @Test
+    @RepeatedTest(10)
     void parseContent_takes_out_all_white_space_and_new_line_to_convert_to_String_array() {
         Content content = new Content();
         String[] expected = new String [] {"Chubby", "Chipmunks", "Live", "Forever"};
@@ -51,7 +51,7 @@ class ContentTest {
     }
 
     @DisplayName("Displays histogram")
-    @Test
+    @RepeatedTest(10)
     void createHistogram_displays_correct_amount_of_stars() {
         Content content = new Content();
         String expected = "*******";

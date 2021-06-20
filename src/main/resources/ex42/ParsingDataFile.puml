@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+Employee o->ListFunctions
+ListFunctions o-> FileFunctions
+
+class FileFunctions {
+    + readFile(List<Employee>)
+    - parseEmployeeInfo(String[])
+}
+
+class ListFunctions {
+    + printList(List<Employee>)
+    + getList()
+    - createHeaders()
+}
+
+class Employee {
+    - firstName : String
+    - lastName : String
+    - salary : int
+
+    + getFirstName()
+    + getLastName()
+    + getSalary()
+}
+
+@enduml

@@ -11,6 +11,7 @@ public class Employee {
     private final int salary;
 
     public Employee(String firstName, String lastName, int salary){
+        //instantiate Employee information
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;

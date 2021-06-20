@@ -13,7 +13,7 @@ class FileFunctions {
 class HashMapFunctions {
     - wordFreqMap: Map<String, Integer>
 
-    + HashMapFunctions()
+    + HashMapFunctions(Map<String, Integer>)
     + getWordFreqMap()
     + setKeys(String [])
     + sortMap()

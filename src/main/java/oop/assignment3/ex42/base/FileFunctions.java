@@ -15,7 +15,7 @@ public class FileFunctions {
     public List<Employee> readFiles(List<Employee> employeeList){
         try{
             //read from csv using BufferedReader
-            String path = "src/main/java/oop/assignment3/ex42/base/exercise42_input.txt";
+            String path = "src/main/resources/ex42/exercise42_input.txt";
             BufferedReader in = new BufferedReader(new FileReader(path));
 
             //ignore the commas

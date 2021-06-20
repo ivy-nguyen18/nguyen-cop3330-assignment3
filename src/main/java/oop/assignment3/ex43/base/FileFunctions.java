@@ -22,12 +22,20 @@ public class FileFunctions {
         this.author = author;
     }
 
-    public boolean createHTML(){
+    public File getHtml(){
+        return html;
+    }
+
+    public String createHTML(){
         //add file to directory
         String pathHtml = String.format("%s/index.html", siteName);
-        System.out.printf("Created ./website/%s/index.html%n", siteName);
         this.html = new File(pathHtml);
-        return html.exists();
+        try{
+            html.createNewFile();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return String.format("Created ./website/%s/index.html%n", siteName);
     }
 
     public void writeToHTML(){
@@ -45,7 +53,7 @@ public class FileFunctions {
     private String formatHTML(){
         //format html tags and skeleton
         return "<!DOCTYPE html>\n" +
-                "<html lang=\"en\"\n>" +
+                "<html lang=\"en\">\n" +
                 "<head>\n" +
                 String.format("<meta name =\"author\" content =\"%s\">%n",author) +
                 String.format("<title>%s</title>%n",siteName) +

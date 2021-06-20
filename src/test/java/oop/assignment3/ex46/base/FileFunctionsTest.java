@@ -7,6 +7,7 @@
 package oop.assignment3.ex46.base;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FileFunctionsTest {
 
     @DisplayName("Content from File")
-    @Test
+    @RepeatedTest(10)
     void readFile() {
         FileFunctions file = new FileFunctions();
         String expected = """

@@ -18,7 +18,7 @@ class FileFunctions{
     - siteName: String
     - author: String
 
-    + FileFunctions()
+    + FileFunctions(String, String)
     + createHTML()
     + writeToHTML()
     - formatHTML()

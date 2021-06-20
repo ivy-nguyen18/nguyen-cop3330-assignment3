@@ -7,6 +7,7 @@
 package oop.assignment3.ex44.base;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -16,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class InventoryTest {
 
     @DisplayName("Thing Product Info")
-    @Test
+    @RepeatedTest(10)
     void searchInventory_returns_information1() {
         HashMap<String, Product> productMap = new HashMap<>();
         JsonFunctions newJson = new JsonFunctions();
@@ -30,7 +31,7 @@ class InventoryTest {
     }
 
     @DisplayName("Widget Product Info")
-    @Test
+    @RepeatedTest(10)
     void searchInventory_returns_information2() {
         HashMap<String, Product> productMap = new HashMap<>();
         JsonFunctions newJson = new JsonFunctions();
@@ -44,7 +45,7 @@ class InventoryTest {
     }
 
     @DisplayName("Doodad Product Info")
-    @Test
+    @RepeatedTest(10)
     void searchInventory_returns_information3() {
         HashMap<String, Product> productMap = new HashMap<>();
         JsonFunctions newJson = new JsonFunctions();
@@ -58,7 +59,7 @@ class InventoryTest {
     }
 
     @DisplayName("Ipad present?")
-    @Test
+    @RepeatedTest(10)
     void productPresent_displays_false_for_not_in_inventory1() {
         HashMap<String, Product> productMap = new HashMap<>();
         JsonFunctions newJson = new JsonFunctions();
@@ -72,7 +73,7 @@ class InventoryTest {
     }
 
     @DisplayName("Galaxy present?")
-    @Test
+    @RepeatedTest(10)
     void productPresent_displays_false_for_not_in_inventory2() {
         HashMap<String, Product> productMap = new HashMap<>();
         JsonFunctions newJson = new JsonFunctions();
@@ -86,7 +87,7 @@ class InventoryTest {
     }
 
     @DisplayName("Thing present?")
-    @Test
+    @RepeatedTest(10)
     void productPresent_displays_true_for_in_inventory1() {
         HashMap<String, Product> productMap = new HashMap<>();
         JsonFunctions newJson = new JsonFunctions();
@@ -100,7 +101,7 @@ class InventoryTest {
     }
 
     @DisplayName("Widget present?")
-    @Test
+    @RepeatedTest(10)
     void productPresent_displays_true_for_in_inventory2() {
         HashMap<String, Product> productMap = new HashMap<>();
         JsonFunctions newJson = new JsonFunctions();
@@ -114,7 +115,7 @@ class InventoryTest {
     }
 
     @DisplayName("Doodad present?")
-    @Test
+    @RepeatedTest(10)
     void productPresent_displays_true_for_in_inventory3() {
         HashMap<String, Product> productMap = new HashMap<>();
         JsonFunctions newJson = new JsonFunctions();

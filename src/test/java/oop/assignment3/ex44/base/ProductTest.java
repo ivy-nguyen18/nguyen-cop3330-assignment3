@@ -6,13 +6,13 @@
 
 package oop.assignment3.ex44.base;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.RepeatedTest;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ProductTest {
 
-    @Test
+    @RepeatedTest(10)
     void getName_returns_set_name() {
         Product product = new Product("Alvin", 3.00, 1);
 
@@ -22,7 +22,7 @@ class ProductTest {
         assertEquals(expected,actual);
     }
 
-    @Test
+    @RepeatedTest(10)
     void getPrice_returns_set_price() {
         Product product = new Product("Alvin", 3.00, 1);
 
@@ -32,7 +32,7 @@ class ProductTest {
         assertEquals(expected,actual);
     }
 
-    @Test
+    @RepeatedTest(10)
     void getQuantity_returns_set_quantity() {
         Product product = new Product("Alvin", 3.00, 1);
 

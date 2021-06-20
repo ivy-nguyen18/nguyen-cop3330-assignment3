@@ -19,7 +19,7 @@ public class JsonFunctions {
     public Inventory readJSON(){
         try{
             Gson gson = new Gson();
-            Path path = Paths.get("src/main/java/oop/assignment3/ex44/base/exercise44_input.json");
+            Path path = Paths.get("src/main/resources/ex44/exercise44_input.json");
             Reader reader = Files.newBufferedReader(path);
             this.inventory = gson.fromJson(reader, Inventory.class);
             reader.close();

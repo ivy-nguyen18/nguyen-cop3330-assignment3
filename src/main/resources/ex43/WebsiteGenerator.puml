@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+FileFunctions o-> DirectoryFunctions
+DirectoryFunctions o-> App
+
+class DirectoryFunctions {
+    - siteName: String
+
+    + DirectoryFunctions()
+    + makeDirectory()
+    + makeJavascriptFolder()
+    + makeCSSFolder()
+}
+
+class FileFunctions{
+    - html: File
+    - siteName: String
+    - author: String
+
+    + FileFunctions(String, String)
+    + createHTML()
+    + writeToHTML()
+    - formatHTML()
+}
+
+class App{
+    - takeInput()
+    - parseBoolean()
+    - checkJavascript()
+    - checkCSS()
+}
+
+@enduml

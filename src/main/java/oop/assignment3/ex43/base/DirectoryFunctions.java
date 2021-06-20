@@ -17,43 +17,34 @@ public class DirectoryFunctions {
         this.siteName = siteName;
     }
 
-    public boolean makeDirectory(){
-        boolean exists = false;
+    public String makeDirectory(){
         //make the directory
         Path path = Paths.get(String.format("%s", this.siteName));
         try{
             Files.createDirectories(path);
-            System.out.printf("Created ./website/%s%n", this.siteName);
-            exists = true;
         } catch (IOException e){
             e.printStackTrace();
         }
-        return exists;
+        return String.format("Created ./website/%s%n", this.siteName);
     }
 
-    public boolean makeJavascriptFolder(){
-        boolean exists = false;
+    public String makeJavascriptFolder(){
         Path pathJS = Paths.get(String.format("%s/js", siteName));
         try{
             Files.createDirectories(pathJS);
-            System.out.printf("Created ./website/%s/js/%n", siteName);
-            exists = true;
         }catch (IOException e){
             e.printStackTrace();
         }
-        return exists;
+        return String.format("Created ./website/%s/js/%n", siteName);
     }
 
-    public boolean makeCSSFolder(){
-        boolean exists = false;
+    public String makeCSSFolder(){
         Path pathCSS = Paths.get(String.format("%s/css", siteName));
         try{
             Files.createDirectories(pathCSS);
-            System.out.printf("Created ./website/%s/css/%n", siteName);
-            exists = true;
         }catch (IOException e){
             e.printStackTrace();
         }
-        return exists;
+        return String.format("Created ./website/%s/css/%n", siteName);
     }
 }

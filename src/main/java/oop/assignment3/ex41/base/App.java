@@ -24,7 +24,9 @@ public class App {
         nameList.sortList();
 
         //print sorted list in ListFunctions class
-        nameList.printList();
+        StringBuilder output = new StringBuilder();
+        output = nameList.printList(output);
+        input.writeFile(output);
 
     }
 }

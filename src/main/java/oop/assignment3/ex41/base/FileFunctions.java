@@ -5,6 +5,8 @@
  */
 package oop.assignment3.ex41.base;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -24,11 +26,25 @@ public class FileFunctions {
 
         //create a List for Employee and return list back to main
         try{
-            Path file = Paths.get("src/main/java/oop/assignment3/ex41/base/exercise41_input.txt");
+            Path file = Paths.get("src/main/resources/ex41/exercise41_input.txt");
             input = Files.readAllLines(file, Charset.defaultCharset());
         }catch(IOException e){
             e.printStackTrace();
         }
         return input;
+    }
+
+    public boolean writeFile(StringBuilder content){
+        boolean exists = false;
+        //write to a file
+        try{
+            BufferedWriter newFile = new BufferedWriter(new FileWriter("exercise41_output.txt"));
+            newFile.write(String.valueOf(content));
+            newFile.close();
+            exists = true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return exists;
     }
 }

@@ -21,16 +21,24 @@ public class ListFunctions {
         Collections.sort(list);
     }
 
-    public void printList(){
-        formatTable();
-        //print List using Java List's foreach
-        list.forEach(System.out::println);
+    public List<String> getList(){
+        return list;
     }
 
-    private void formatTable(){
+    public StringBuilder printList(StringBuilder output){
+        formatTable(output);
+        //write List to output using Java List's foreach
+        for(String s: list){
+            output.append('\n').append(s);
+        }
+        return output;
+    }
+
+    private StringBuilder formatTable(StringBuilder output){
         //create the table with the size of list
-        System.out.printf("Total of %s names%n", list.size());
+        output.append(String.format("Total of %s names%n", list.size()));
         String dash = "-";
-        System.out.println(dash.repeat(20));
+        output.append(dash.repeat(20));
+        return output;
     }
 }

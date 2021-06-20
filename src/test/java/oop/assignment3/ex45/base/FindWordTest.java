@@ -7,6 +7,7 @@
 package oop.assignment3.ex45.base;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FindWordTest {
 
     @DisplayName("Replace Chonky with Thick")
-    @Test
+    @RepeatedTest(10)
     void findAndReplace_replaces_word_in_string1() {
         FindWord newString = new FindWord();
 
@@ -26,7 +27,7 @@ class FindWordTest {
     }
 
     @DisplayName("Replace ' ' with * ")
-    @Test
+    @RepeatedTest(10)
     void findAndReplace_replaces_word_in_string2() {
         FindWord newString = new FindWord();
 
@@ -38,7 +39,7 @@ class FindWordTest {
     }
 
     @DisplayName("Replace frog with prince and Frog with Prince")
-    @Test
+    @RepeatedTest(10)
     void findAndReplace_replaces_word_in_string_twice() {
         FindWord newString = new FindWord();
 

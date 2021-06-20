@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+HashMapFunctions o-> Content
+Content o-> FileFunctions
+
+
+class FileFunctions {
+    + readFile()
+}
+
+class HashMapFunctions {
+    - wordFreqMap: Map<String, Integer>
+
+    + HashMapFunctions(Map<String, Integer>)
+    + getWordFreqMap()
+    + setKeys(String [])
+    + sortMap()
+    - isMapSorted()
+    - areKeysUnique()
+    - swapMaps(List<Map.Entry<String,Integer>>)
+}
+
+class Content{
+    + parseContent(String)
+    + printFrequencyDescending(Map<String, Integer>)
+    + createHistogram(int)
+}
+
+
+@enduml
