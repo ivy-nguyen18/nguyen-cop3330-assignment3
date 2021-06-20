@@ -49,4 +49,14 @@ class ContentTest {
         String[] actual = content.parseContent("Chubby          Chipmunks\n Live\n\t Forever ");
         assertArrayEquals(expected, actual);
     }
+
+    @DisplayName("Displays histogram")
+    @Test
+    void createHistogram_displays_correct_amount_of_stars() {
+        Content content = new Content();
+        String expected = "*******";
+        String actual = content.createHistogram(7);
+        assertEquals(expected,actual);
+    }
+
 }

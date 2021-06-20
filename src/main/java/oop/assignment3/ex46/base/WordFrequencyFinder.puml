@@ -22,7 +22,7 @@ class HashMapFunctions {
 class Content{
     + parseContent()
     + printFrequencyDescending()
-    - createHistogram()
+    + createHistogram()
 }
 
 

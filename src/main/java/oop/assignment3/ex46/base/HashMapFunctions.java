@@ -34,7 +34,9 @@ public class HashMapFunctions {
         List<Map.Entry<String, Integer>> list = new LinkedList<>(wordFreqMap.entrySet());
         list.sort((o1, o2) -> -(o1.getValue()).compareTo(o2.getValue()));
         wordFreqMap = swapMaps(list);
+        //return isMapSorted();
     }
+
 
     private Map<String,Integer> swapMaps( List<Map.Entry<String, Integer>> list){
         //set temp map to equal wordFreq map

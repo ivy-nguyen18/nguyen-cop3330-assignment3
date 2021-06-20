@@ -23,7 +23,7 @@ public class Content {
         }
     }
 
-    private String createHistogram(int nStars){
+    public String createHistogram(int nStars){
         //create histogram by value
         String star = "*";
         return star.repeat(nStars);

@@ -13,10 +13,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class HashMapFunctionsTest {
 
     @Test
-    void getWordFreqMap() {
-    }
-
-    @Test
     void setKeys() {
     }
 
