@@ -14,11 +14,12 @@ class Inventory{
     - productList: List
     - productMap: HashMap<String, Product>
 
-    + setInventoryMap(productMap)
-    + productPresent(query)
-    + searchInventory(query)
-    - findProduct(key, query)
-    - formatProductString(key)
+    + setInventoryMap(HashMap<String, Product>)
+    + productPresent(String)
+    + searchInventory(String)
+    + getProductList()
+    - findProduct(String, String)
+    - formatProductString(String)
 }
 
 class Product{

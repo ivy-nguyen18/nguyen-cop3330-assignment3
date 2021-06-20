@@ -42,7 +42,7 @@ public class Inventory {
     private String formatProductString(String key){
         return (String.format("Name: %s%n", productMap.get(key).getName()) +
                 String.format("Price: %.2f%n", productMap.get(key).getPrice()) +
-                String.format("Quantity: %d%n", productMap.get(key).getQuantity()));
+                String.format("Quantity: %d", productMap.get(key).getQuantity()));
     }
 
     public boolean productPresent(String query){
@@ -51,6 +51,10 @@ public class Inventory {
 
     private boolean findProduct(String key, String query){
         return productMap.get(key).getName().equalsIgnoreCase(query);
+    }
+
+    public ArrayList<Product> getProductList(){
+        return productList;
     }
 
 }
