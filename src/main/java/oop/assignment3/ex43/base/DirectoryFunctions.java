@@ -23,7 +23,7 @@ public class DirectoryFunctions {
         Path path = Paths.get(String.format("%s", this.siteName));
         try{
             Files.createDirectories(path);
-            System.out.printf("Created ./%s%n", this.siteName);
+            System.out.printf("Created ./website/%s%n", this.siteName);
             exists = true;
         } catch (IOException e){
             e.printStackTrace();
@@ -36,7 +36,7 @@ public class DirectoryFunctions {
         Path pathJS = Paths.get(String.format("%s/js", siteName));
         try{
             Files.createDirectories(pathJS);
-            System.out.printf("Created ./%s/js/%n", siteName);
+            System.out.printf("Created ./website/%s/js/%n", siteName);
             exists = true;
         }catch (IOException e){
             e.printStackTrace();
@@ -49,7 +49,7 @@ public class DirectoryFunctions {
         Path pathCSS = Paths.get(String.format("%s/css", siteName));
         try{
             Files.createDirectories(pathCSS);
-            System.out.printf("Created ./%s/css/%n", siteName);
+            System.out.printf("Created ./website/%s/css/%n", siteName);
             exists = true;
         }catch (IOException e){
             e.printStackTrace();

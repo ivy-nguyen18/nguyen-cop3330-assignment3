@@ -12,8 +12,9 @@ public class Content {
     public String[] parseContent(String content){
         //iterate through string
         content = content.replaceAll("\n"," ").replaceAll("\r", " ");
-        return content.split(" ");
+        return content.trim().split("\\s+");
     }
+
 
     public void printFrequencyDescending(Map<String,Integer> wordFreqMap){
         //print hashmap

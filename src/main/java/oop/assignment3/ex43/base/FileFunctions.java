@@ -25,6 +25,7 @@ public class FileFunctions {
     public boolean createHTML(){
         //add file to directory
         String pathHtml = String.format("%s/index.html", siteName);
+        System.out.printf("Created ./website/%s/index.html%n", siteName);
         this.html = new File(pathHtml);
         return html.exists();
     }

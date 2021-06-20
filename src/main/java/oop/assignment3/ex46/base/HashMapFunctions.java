@@ -19,14 +19,12 @@ public class HashMapFunctions {
     public void setKeys(String [] arr) {
         //add to hashmap by frequency: keys are words, value is frequency
         for (String s : arr) {
-            if(s.length() > 0){
-                //word is already a key, increase count
-                if (wordFreqMap.containsKey(s)) {
-                    wordFreqMap.put(s, wordFreqMap.get(s) + 1);
-                } else {
-                    //word is not a key, make new key
-                    wordFreqMap.put(s, 1);
-                }
+            //word is already a key, increase count
+            if (wordFreqMap.containsKey(s)) {
+                wordFreqMap.put(s, wordFreqMap.get(s) + 1);
+            } else {
+                //word is not a key, make new key
+                wordFreqMap.put(s, 1);
             }
         }
     }

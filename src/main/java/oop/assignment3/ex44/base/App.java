@@ -35,12 +35,12 @@ public class App {
                 break;
             }
             //product does not exist: keep asking
-            System.out.println("Sorry, that product was not found in our inventory");
+            System.out.println("Sorry, that product was not found in our inventory.");
         }
     }
 
     private static String takeInput (String prompt){
-        System.out.println(prompt);
+        System.out.print(prompt);
         return input.nextLine();
     }
 }
