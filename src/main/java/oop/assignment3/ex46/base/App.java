@@ -5,8 +5,13 @@
  */
 package oop.assignment3.ex46.base;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 public class App {
     public static void main(String[] args) {
+        Map<String,Integer> newWordMap = new TreeMap<>();
+
         //read file
         FileFunctions input = new FileFunctions();
         String content = input.readFile();
@@ -16,7 +21,7 @@ public class App {
         String [] arr = newContent.parseContent(content);
 
         //create a hashmap
-        HashMapFunctions wordFreqMap = new HashMapFunctions();
+        HashMapFunctions wordFreqMap = new HashMapFunctions(newWordMap);
         wordFreqMap.setKeys(arr);
 
         //sort hashmap
