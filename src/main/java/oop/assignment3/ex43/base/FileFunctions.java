@@ -18,11 +18,13 @@ public class FileFunctions {
     private final String author;
 
     public FileFunctions(String siteName, String author){
+        //instantiate siteName and author
         this.siteName = siteName;
         this.author = author;
     }
 
     public File getHtml(){
+        //return html
         return html;
     }
 

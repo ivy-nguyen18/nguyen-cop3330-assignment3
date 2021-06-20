@@ -45,6 +45,7 @@ public class App {
     }
 
     private static boolean parseBoolean(String answer){
+        //converts answer to boolean, y = true
         return "y".equalsIgnoreCase(answer);
     }
 

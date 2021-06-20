@@ -12,20 +12,24 @@ public class Product {
     private final int quantity;
 
     public Product(String name, double price, int quantity){
+        //instantiate product information
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
 
     public String getName() {
+        //return name
         return name;
     }
 
     public double getPrice() {
+        //return price
         return price;
     }
 
     public int getQuantity() {
+        //return quantity
         return quantity;
     }
 }

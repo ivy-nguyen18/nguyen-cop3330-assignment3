@@ -18,14 +18,17 @@ public class Employee {
     }
 
     public String getFirstName() {
+        //return firstName
         return firstName;
     }
 
     public String getLastName() {
+        //return lastName
         return lastName;
     }
 
     public int getSalary() {
+        //return salary
         return salary;
     }
 }

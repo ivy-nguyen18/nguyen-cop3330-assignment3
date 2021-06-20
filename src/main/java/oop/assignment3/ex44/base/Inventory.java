@@ -61,6 +61,7 @@ public class Inventory {
     }
 
     public ArrayList<Product> getProductList(){
+        //return productList
         return productList;
     }
 

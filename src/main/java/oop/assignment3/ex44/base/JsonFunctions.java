@@ -17,10 +17,12 @@ import java.nio.file.Paths;
 public class JsonFunctions {
     private Inventory inventory;
     public Inventory readJSON(){
+        //read JSON file
         try{
             Gson gson = new Gson();
             Path path = Paths.get("src/main/resources/ex44/exercise44_input.json");
             Reader reader = Files.newBufferedReader(path);
+            //read JSON object "products", which contains an array/list of products
             this.inventory = gson.fromJson(reader, Inventory.class);
             reader.close();
         } catch (IOException e) {

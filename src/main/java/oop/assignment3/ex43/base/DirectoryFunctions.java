@@ -29,6 +29,7 @@ public class DirectoryFunctions {
     }
 
     public String makeJavascriptFolder(){
+        //make Javascript folder
         Path pathJS = Paths.get(String.format("%s/js", siteName));
         try{
             Files.createDirectories(pathJS);
@@ -39,6 +40,7 @@ public class DirectoryFunctions {
     }
 
     public String makeCSSFolder(){
+        //make CSS folder
         Path pathCSS = Paths.get(String.format("%s/css", siteName));
         try{
             Files.createDirectories(pathCSS);
