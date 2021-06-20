@@ -1,3 +1,8 @@
+/*
+ * UCF COP3330 Summer 2021 Assignment 3 Solution
+ * Copyright 2021 Ivy Nguyen
+ *
+ */
 package oop.assignment3.ex42.base;
 
 import java.io.BufferedReader;
@@ -10,7 +15,8 @@ public class FileFunctions {
     public List<Employee> readFiles(List<Employee> employeeList){
         try{
             //read from csv using BufferedReader
-            BufferedReader in = new BufferedReader(new FileReader("src/main/java/oop/assignment3/ex42/base/exercise42_input.txt"));
+            String path = "src/main/java/oop/assignment3/ex42/base/exercise42_input.txt";
+            BufferedReader in = new BufferedReader(new FileReader(path));
 
             //ignore the commas
             String commaDelimiter = ",";

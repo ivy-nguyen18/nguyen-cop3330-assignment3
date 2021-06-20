@@ -1,3 +1,8 @@
+/*
+ * UCF COP3330 Summer 2021 Assignment 3 Solution
+ * Copyright 2021 Ivy Nguyen
+ *
+ */
 package oop.assignment3.ex41.base;
 
 import java.io.IOException;
@@ -5,7 +10,6 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 
 public class FileFunctions {
