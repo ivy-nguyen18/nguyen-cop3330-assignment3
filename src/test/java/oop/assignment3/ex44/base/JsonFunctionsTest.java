@@ -8,9 +8,8 @@ package oop.assignment3.ex44.base;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JsonFunctionsTest {
     @DisplayName("Read JSON into Inventory List")

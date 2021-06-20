@@ -27,7 +27,6 @@ class DirectoryFunctionsTest {
     void makeJavascriptFolder_returns_string_of_working_directory_of_file() {
         String siteName = "awesomeco";
         DirectoryFunctions newDir = new DirectoryFunctions(siteName);
-        String dir = newDir.makeDirectory();
 
         String expected = String.format("Created ./website/%s/js/%n", siteName);
         String actual = newDir.makeJavascriptFolder();
@@ -39,7 +38,6 @@ class DirectoryFunctionsTest {
     void makeCSSFolder_returns_string_of_working_directory_of_file() {
         String siteName = "awesomeco";
         DirectoryFunctions newDir = new DirectoryFunctions(siteName);
-        String dir = newDir.makeDirectory();
 
         String expected = String.format("Created ./website/%s/css/%n", siteName);
         String actual = newDir.makeCSSFolder();
