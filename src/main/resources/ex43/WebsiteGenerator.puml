@@ -7,10 +7,10 @@ DirectoryFunctions o-> App
 class DirectoryFunctions {
     - siteName: String
 
-    + DirectoryFunctions()
-    + makeDirectory()
-    + makeJavascriptFolder()
-    + makeCSSFolder()
+    + DirectoryFunctions(): void
+    + makeDirectory(): String
+    + makeJavascriptFolder(): String
+    + makeCSSFolder(): String
 }
 
 class FileFunctions{
@@ -18,17 +18,17 @@ class FileFunctions{
     - siteName: String
     - author: String
 
-    + FileFunctions(String, String)
-    + createHTML()
-    + writeToHTML()
-    - formatHTML()
+    + FileFunctions(String, String): void
+    + createHTML(): String
+    + writeToHTML(): void
+    - formatHTML(): String
 }
 
 class App{
-    - takeInput()
-    - parseBoolean()
-    - checkJavascript()
-    - checkCSS()
+    - takeInput(): String
+    - parseBoolean(): boolean
+    - checkJavascript(): String
+    - checkCSS(): String
 }
 
 @enduml

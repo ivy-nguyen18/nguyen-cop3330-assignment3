@@ -6,19 +6,19 @@ ListFunctions o-> FileFunctions
 class FileFunctions {
     - input: List
 
-    + FileFunctions(List<String>)
-    + readFile()
-    + writeFile(StringBuilder)
+    + FileFunctions(List<String>): void
+    + readFile(): List<String>
+    + writeFile(StringBuilder): boolean
 }
 
 class ListFunctions {
     - list: List
 
-    + ListFunctions(List<String>)
-    + sortList()
-    + getList()
-    + printList(StringBuilder)
-    - formatTable(StringBuilder)
+    + ListFunctions(List<String>): void
+    + sortList(): void
+    + getList(): List<String>
+    + printList(StringBuilder): StringBuilder
+    - formatTable(StringBuilder): StringBuilder
 }
 
 

@@ -40,16 +40,19 @@ public class FileFunctions {
         return String.format("Created ./website/%s/index.html%n", siteName);
     }
 
-    public void writeToHTML(){
+    public boolean writeToHTML(){
+        boolean exists = false;
         //write to file
         String htmlSkeleton = formatHTML();
         try{
             BufferedWriter bw = new BufferedWriter(new FileWriter(html));
             bw.write(htmlSkeleton);
             bw.close();
+            exists = true;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return exists;
     }
 
     private String formatHTML(){

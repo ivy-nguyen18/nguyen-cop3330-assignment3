@@ -45,4 +45,21 @@ class FileFunctionsTest {
         assertEquals(expected,actual);
     }
 
+    @DisplayName("HTML File is created?")
+    @Test
+    void writeToHTML_returns_true_if_file_is_created() {
+        String siteName = "chipmunks";
+        String author = "alvin";
+        DirectoryFunctions newDir = new DirectoryFunctions(siteName);
+        newDir.makeDirectory();
+        FileFunctions newFile = new FileFunctions(siteName, author);
+        String created = newFile.createHTML();
+
+        boolean actual = newFile.writeToHTML();
+        boolean expected = true;
+
+        assertEquals(expected,actual);
+    }
+
+
 }

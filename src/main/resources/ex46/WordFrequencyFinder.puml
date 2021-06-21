@@ -7,25 +7,25 @@ Content o-> FileFunctions
 
 
 class FileFunctions {
-    + readFile()
+    + readFile(): String
 }
 
 class HashMapFunctions {
     - wordFreqMap: Map<String, Integer>
 
-    + HashMapFunctions(Map<String, Integer>)
-    + getWordFreqMap()
-    + setKeys(String [])
-    + sortMap()
-    - isMapSorted()
-    - areKeysUnique()
-    - swapMaps(List<Map.Entry<String,Integer>>)
+    + HashMapFunctions(Map<String, Integer>): void
+    + getWordFreqMap(): Map<String,Integer>
+    + setKeys(String []): boolean
+    + sortMap(): boolean
+    - isMapSorted(): boolean
+    - areKeysUnique(): boolean
+    - swapMaps(List<Map.Entry<String,Integer>>): Map<String,Integer>
 }
 
 class Content{
-    + parseContent(String)
-    + printFrequencyDescending(Map<String, Integer>)
-    + createHistogram(int)
+    + parseContent(String): String[]
+    + printFrequencyDescending(Map<String, Integer>): void
+    + createHistogram(int): void
 }
 
 

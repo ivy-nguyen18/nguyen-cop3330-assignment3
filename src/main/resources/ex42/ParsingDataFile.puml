@@ -6,14 +6,13 @@ Employee o->ListFunctions
 ListFunctions o-> FileFunctions
 
 class FileFunctions {
-    + readFile(List<Employee>)
-    - parseEmployeeInfo(String[])
+    + readFile(List<Employee>): List<Employee>
+    - parseEmployeeInfo(String[]): Employee
 }
 
 class ListFunctions {
-    + printList(List<Employee>)
-    + getList()
-    - createHeaders()
+    + printList(List<Employee>): void
+    - createHeaders(): void
 }
 
 class Employee {
@@ -21,9 +20,10 @@ class Employee {
     - lastName : String
     - salary : int
 
-    + getFirstName()
-    + getLastName()
-    + getSalary()
+    + Employee(String, String, int): void
+    + getFirstName(): String
+    + getLastName(): String
+    + getSalary(): int
 }
 
 @enduml

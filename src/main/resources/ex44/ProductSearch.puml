@@ -7,19 +7,20 @@ JsonFunctions o-> Inventory
 class JsonFunctions{
     - inventory: Inventory
 
-    + readJSON()
+    + readJSON(): Inventory
 }
 
 class Inventory{
     - productList: ArrayList<Product>
     - inventoryMap: HashMap<String, Product>
 
-    + setInventoryMap(HashMap<String, Product>)
-    + productPresent(String)
-    + searchInventory(String)
-    + getProductList()
-    - findProduct(String, String)
-    - formatProductString(String)
+    + Inventory(ArrayList<Product>): void
+    + setInventoryMap(HashMap<String, Product>): void
+    + productPresent(String): boolean
+    + searchInventory(String): boolean
+    + getProductList(): ArrayList<Product>
+    - findProduct(String, String): boolean
+    - formatProductString(String): String
 }
 
 class Product{
@@ -27,9 +28,9 @@ class Product{
     - price: double
     - quantity: int
 
-    + getName()
-    + getPrice()
-    + getQuantity()
+    + getName(): String
+    + getPrice(): double
+    + getQuantity(): int
 }
 
 
